@@ -9,7 +9,7 @@
 # ('*', 5, 5) --> 25
 # ('/', 49, 7) --> 7
 
-
+# my answer
 def basic_op(operator, value1, value2):
     #your code here
     if operator == '+':
@@ -20,6 +20,20 @@ def basic_op(operator, value1, value2):
         return value1 * value2
     elif operator == '/':
         return value1 / value2
+
+# other answers
+def basic_op(operator, value1, value2):
+    return eval("{}{}{}".format(value1, operator, value2))
+
+def basic_op(o, a, b):
+    return {'+':a+b,'-':a-b,'*':a*b,'/':a/b}.get(o)
+
+def basic_op(operator, value1, value2):
+    return eval(str(value1) + operator + str(value2))
+
+
+
+
 
 print(basic_op('+', 4, 66))
 print(basic_op('-', 4, 66))
